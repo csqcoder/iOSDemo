@@ -39,7 +39,7 @@
 #pragma mark appstore界面的跳转
 - (void) jumpButton:(UIButton *)button {
 
-    NSURL *url = [NSURL URLWithString:@"itms-apps://itunes.apple.com/cn/app/you-zan-pi-fa/id1041302121?mt=8"];
+    NSURL *url = [NSURL URLWithString:@"AppStore跳转地址"];
     if (button.tag == 1) {
         [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
     } else {
@@ -47,7 +47,7 @@
         appStore.delegate = self;
         // 借鉴了新浪微博的跳转做法，先去跳转再去加载页面，体验感方面会好很多
         [self presentViewController:appStore animated:YES completion:nil];
-        [appStore loadProductWithParameters:@{SKStoreProductParameterITunesItemIdentifier : @"1041302121"} completionBlock:^(BOOL result, NSError * _Nullable error) {
+        [appStore loadProductWithParameters:@{SKStoreProductParameterITunesItemIdentifier : @"这里填ID"} completionBlock:^(BOOL result, NSError * _Nullable error) {
             if (error) {
                 NSLog(@"错误 %@",error);
             } else {
