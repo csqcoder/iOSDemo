@@ -56,6 +56,8 @@
     }
 }
 
+// 测试
+
 - (void)productViewControllerDidFinish:(SKStoreProductViewController *)viewController {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
